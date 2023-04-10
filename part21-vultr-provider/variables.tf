@@ -12,3 +12,8 @@ variable "one_cpu_one_gb_ram" {
   description = "1024 MB RAM,25 GB SSD,1.00 TB BW"
   default = "vc2-1c-1gb"
 }
+
+variable "vultr_api_key" {
+    default = " - "
+  
+}

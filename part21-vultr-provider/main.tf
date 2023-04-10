@@ -15,16 +15,12 @@ resource "vultr_instance" "my_instance" {
   label                  = "terraform example"
   enable_ipv6            = true
   backups                = "enabled"
-  enable_private_network = true
   activation_email       = false
   ddos_protection        = true
   tags                   = ["my_tag"]
   firewall_group_id      = vultr_firewall_group.fwg.id
-  backups_type {
-    type = "daily"
-  }
 }
-/*
+
 resource "vultr_firewall_group" "fwg" {
   description = "docker-fwg"
 }
@@ -74,4 +70,3 @@ resource "vultr_load_balancer" "lb" {
   }
 
 }
-*/
